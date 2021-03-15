@@ -1,3 +1,3 @@
 $(document).ready(() => {
-   // $("#alert").addClass("yellow");
+    $("#alert").addClass("yellow");
 });
