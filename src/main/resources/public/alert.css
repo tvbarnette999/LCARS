@@ -180,13 +180,24 @@ body {
 #conditionYellow {
     display: none;
 }
-.yellow #conditionRed {
+#conditionGreen {
     display: none;
 }
-
+.yellow #conditionRed, .green #conditionRed {
+    display: none;
+}
 .yellow #conditionYellow {
     display: block;
     font-size: .3em;
+}
+.green #conditionGreen {
+    display: block;
+    font-size: .345em;
+    position: relative;
+    top: 2.3em;
+}
+.green .text .large {
+    display: none;
 }
 
 

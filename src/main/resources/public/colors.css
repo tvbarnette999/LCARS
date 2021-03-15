@@ -1,8 +1,9 @@
 /* Things color related */
 /* No color defaults to red */
 :root {
-    --alertYellow: #FFC300;
     --alertRed: #9f0200;
+    --alertYellow: #FFC300;
+    --alertGreen: #009F00;
     --barBoxShadowYellow: 0 0 .5em .3em rgba(177, 150, 0, .7);
     --barBoxShadowRed: 0 0 .5em .3em rgba(177, 2, 0, .7);
 }
@@ -13,6 +14,9 @@
 .yellow .text {
     color: var(--alertYellow);
 }
+.green .text {
+    color: var(--alertGreen);
+}
 
 .shape-side:before {
     background: var(--alertRed);
@@ -20,12 +24,22 @@
 .yellow .shape-side:before {
     background: var(--alertYellow);
 }
+.green .shape-side:before {
+    background: var(--alertGreen);
+}
 
 .shape-wide:before {
     background: var(--alertRed);
 }
 .yellow .shape-wide:before {
     background: var(--alertYellow);
+}
+.green .shape-wide:before {
+    background: var(--alertGreen);
+}
+
+.green .shape-bars {
+    display: none;
 }
 
 .shape-bars .bar:nth-child(1) .shape {
@@ -113,6 +127,9 @@
 .yellow .shape-bars-cover {
     background: var(--alertYellow);
 }
+.green .shape-bars-cover {
+    background: var(--alertGreen);
+}
 
 .shape-bars-cover:before {
     background: var(--alertRed);
@@ -120,11 +137,16 @@
 .yellow .shape-bars-cover:before {
     background: var(--alertYellow);
 }
+.green .shape-bars-cover:before {
+    background: var(--alertGreen);
+}
 
 .shape-bars-cover:after {
     background: var(--alertRed);
 }
-
 .yellow .shape-bars-cover:after {
     background: var(--alertYellow);
+}
+.green .shape-bars-cover:after {
+    background: var(--alertGreen);
 }
