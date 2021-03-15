@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+application {
+    mainClass = 'lcars.Server'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'com.sparkjava:spark-core:2.9.1'
+    compile 'org.slf4j:slf4j-api:1.7.30'
+    compile 'org.slf4j:slf4j-simple:1.7.30'
+    compile 'com.github.oshi:oshi-core:5.6.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        resources {
+            include '/public/**'
+            //   include '/velocity/**' //idt we need templating.
+        }
+    }
+}
+
+
+sourceSets.main.compileClasspath = files('src/main/resources/') + sourceSets.main.compileClasspath
+sourceSets.main.runtimeClasspath = files('src/main/resources/') + sourceSets.main.runtimeClasspath

@@ -1,0 +1,376 @@
+@font-face {
+    font-family: red_alert;
+    src: url(RedAlert-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400
+}
+
+html {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #000;
+    font-size: 1.4vmin;
+    margin: 0;
+    padding: 2em 1em
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+    line-height: 0
+}
+
+.center-absolute {
+    margin: auto;
+    position: absolute
+}
+
+.red-alert {
+    box-sizing: content-box;
+    border: 1em solid #000;
+    border-bottom: 0;
+    border-top: 0;
+    height: 51.375em;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 62em
+}
+
+.rotate {
+    transform: rotate(180deg)
+}
+
+.shape-side {
+    border-radius: 0 .45em .45em 0;
+    height: 10.9em;
+    overflow: hidden;
+    position: absolute;
+    top: 20.25em;
+    width: 8.75em
+}
+
+.shape-side:before {
+    border-radius: 50% 0 0 50%;
+    content: '';
+    display: block;
+    height: 20em;
+    margin: -51.5% 0 0 0;
+    position: relative;
+    width: 100%
+}
+
+.shape-side.normal {
+    left: 0
+}
+
+.shape-side.rotate {
+    right: 0
+}
+
+.shape-wide-contain {
+    height: 16.5em;
+    left: 6em;
+    overflow: hidden;
+    position: absolute;
+    width: 50em
+}
+
+.shape-wide-contain.normal {
+    top: 1em
+}
+
+.shape-wide-contain.rotate {
+    bottom: 1em
+}
+
+.shape-wide {
+    height: 100%
+}
+
+.shape-wide:before {
+    border-radius: 100% 100% 0 0/105% 105% 0 0;
+    content: '';
+    display: block;
+    height: 49em;
+    margin: -2.2em 0 0 -5.2em;
+    position: relative;
+    width: 60.4em
+}
+
+.shape-wide:after {
+    background: #000;
+    border-radius: 0 0 .5em .5em;
+    content: '';
+    display: block;
+    height: 15.8em;
+    left: 12.65em;
+    position: absolute;
+    top: -1em;
+    width: 24.75em
+}
+
+.shape-wide-hide {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 11.7em;
+    width: 100%;
+    z-index: 1
+}
+
+.shape-wide-hide:before {
+    background: #000;
+    content: '';
+    display: block;
+    height: 10em;
+    left: -6em;
+    position: absolute;
+    transform: rotate(40.5deg);
+    width: 15em
+}
+
+.shape-wide-hide:after {
+    background: #000;
+    content: '';
+    display: block;
+    height: 10em;
+    position: absolute;
+    right: -6em;
+    transform: rotate(-40.5deg);
+    width: 15em
+}
+
+.text {
+    cursor: default;
+    font-family: red_alert, sans-serif;
+    font-size: 8.1em;
+    letter-spacing: -.07em;
+    line-height: 1.3em;
+    position: absolute;
+    text-align: center;
+    top: 32.3%;
+    width: 100%;
+    z-index: 22
+}
+
+.text .large {
+    animation: text_large 2s steps(60) infinite;
+    letter-spacing: 2px;
+}
+
+.yellow .text .large {
+    animation: yello_text_large 4s steps(120) infinite;
+    letter-spacing: 2px;
+}
+
+.text .small {
+    display: block;
+    font-size: .365em;
+    letter-spacing: 0;
+    line-height: 1.69em
+}
+
+#conditionYellow {
+    display: none;
+}
+.yellow #conditionRed {
+    display: none;
+}
+
+.yellow #conditionYellow {
+    display: block;
+    font-size: .325em;
+}
+
+
+.text-background {
+    background: #000;
+    height: 16.5em;
+    left: 9em;
+    position: absolute;
+    top: 17.47em;
+    width: 44em;
+    z-index: 21
+}
+
+.shape-bars {
+    height: 20.748em;
+    left: 50%;
+    margin: 0 0 0 -12.375em;
+    position: absolute;
+    width: 24.75em;
+    z-index: 1
+}
+
+.shape-bars .bar {
+    height: 18em;
+    left: -5.8125em;
+    padding: 0 6.1em;
+    position: absolute;
+    top: 0;
+    width: 36.4375em
+}
+
+.shape-bars .bar .shape {
+    height: .9375em;
+    left: 0;
+    margin-top: 8.5625em;
+    width: 100%
+}
+
+.shape-bars .bar:nth-child(1) {
+    animation: bar1 2s steps(1) infinite;
+    left: -5.6875em;
+    top: 0;
+    width: 36.1875em;
+    z-index: 1
+}
+
+.yellow .shape-bars .bar:nth-child(1) {
+    animation: bar1 4s steps(1) infinite;
+}
+
+/* Outer bar */
+.shape-bars .bar:nth-child(1) .shape {
+    border-radius: .4em;
+}
+
+/* Seconds bar */
+.shape-bars .bar:nth-child(2) {
+    animation: bar2 2s steps(1) infinite;
+    left: -5.75em;
+    width: 36.3125em;
+    top: 1.1875em;
+    z-index: 2
+}
+
+.yellow .shape-bars .bar:nth-child(2) {
+    animation: bar2 4s steps(1) infinite;
+}
+
+.shape-bars .bar:nth-child(2) .shape {
+    border-radius: .4em;
+}
+
+/* 3rd bar */
+/* 3rd bar haze */
+.shape-bars .bar:nth-child(3) {
+    animation: bar3 2s steps(1) infinite;
+    top: 2.375em;
+    z-index: 3
+}
+.yellow .shape-bars .bar:nth-child(3) {
+    animation: bar3 4s steps(1) infinite;
+}
+
+/* About a 10.5 delta-E = +18 green for yellow */
+.shape-bars .bar:nth-child(3) .shape {
+    border-radius: .4em;
+}
+
+/* 4th bar haze */
+.shape-bars .bar:nth-child(4) {
+    animation: bar4 2s steps(1) infinite;
+    left: -5.75em;
+    top: 3.625em;
+    width: 36.3125em;
+    z-index: 4
+}
+
+.yellow .shape-bars .bar:nth-child(4) {
+    animation: bar4 4s steps(1) infinite;
+}
+
+/* 4th bar */
+.shape-bars .bar:nth-child(4) .shape {
+    border-radius: .4em;
+}
+
+/* Inner bar haze */
+.shape-bars .bar:nth-child(5) {
+    animation: bar5 2s steps(1) infinite;
+    left: -5.6875em;
+    top: 5em;
+    width: 36.1875em;
+    z-index: 5
+}
+
+.yellow .shape-bars .bar:nth-child(5) {
+    animation: bar5 4s steps(1) infinite;
+    left: -5.6875em;
+    top: 5em;
+    width: 36.1875em;
+    z-index: 5
+}
+
+/* Inner bar */
+.shape-bars .bar:nth-child(5) .shape {
+    border-radius: .45em;
+}
+
+/* Bar naimation */
+.shape-bars.normal {
+    animation: shape_bars 2s steps(60) infinite;
+    top: -20em
+}
+
+.yellow .shape-bars.normal {
+    animation: shape_bars 4s steps(120) infinite;
+}
+
+.shape-bars.rotate {
+    animation: shape_bars_rotate 2s steps(60) infinite;
+    bottom: -20em
+}
+
+.yellow .shape-bars.rotate {
+    animation: shape_bars_rotate 4s steps(120) infinite;
+}
+
+.shape-bars-cover {
+    height: 1.6875em;
+    left: 50%;
+    margin-left: -15.5em;
+    position: absolute;
+    width: 31em;
+    z-index: 20
+}
+
+.shape-bars-cover:before {
+    content: '';
+    display: block;
+    height: 14.4em;
+    left: -.2em;
+    position: absolute;
+    width: 3.2em
+}
+
+.shape-bars-cover:after {
+    content: '';
+    display: block;
+    height: 14.4em;
+    position: absolute;
+    right: -.2em;
+    width: 3.2em
+}
+
+.shape-bars-cover.normal {
+    bottom: 0
+}
+
+.shape-bars-cover.normal:after, .shape-bars-cover.normal:before {
+    bottom: 0
+}
+
+.shape-bars-cover.opposite {
+    bottom: 15.8125em;
+    height: 1.65em
+}
+

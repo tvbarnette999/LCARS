@@ -1,0 +1,130 @@
+/* Things color related */
+/* No color defaults to red */
+:root {
+    --alertYellow: #FFC300;
+    --alertRed: #9f0200;
+    --barBoxShadowYellow: 0 0 .5em .3em rgba(177, 150, 0, .7);
+    --barBoxShadowRed: 0 0 .5em .3em rgba(177, 2, 0, .7);
+}
+
+.text {
+    color: var(--alertRed);
+}
+.yellow .text {
+    color: var(--alertYellow);
+}
+
+.shape-side:before {
+    background: var(--alertRed);
+}
+.yellow .shape-side:before {
+    background: var(--alertYellow);
+}
+
+.shape-wide:before {
+    background: var(--alertRed);
+}
+.yellow .shape-wide:before {
+    background: var(--alertYellow);
+}
+
+.shape-bars .bar:nth-child(1) .shape {
+    background: #970200;
+    box-shadow: var(--barBoxShadowRed);
+}
+
+.yellow .shape-bars .bar:nth-child(1) .shape {
+    background: var(--alertYellow);
+    box-shadow: var(--barBoxShadowYellow);
+}
+
+.shape-bars .bar:nth-child(2) .shape {
+    background: #b10200;
+    border-radius: .4em;
+    box-shadow: var(--barBoxShadowRed);
+}
+.yellow .shape-bars .bar:nth-child(2) .shape {
+    background: #FFD500;
+    box-shadow: var(--barBoxShadowYellow);
+}
+
+/* 3rd bar */
+/* haze */
+.shape-bars .bar:nth-child(3) {
+    background: radial-gradient(closest-side, rgba(159, 2, 0, .2) 30%, rgba(159, 2, 0, 0) 100%);
+}
+.yellow .shape-bars .bar:nth-child(3) {
+    background: radial-gradient(closest-side, rgba(159, 150, 0, .2) 30%, rgba(159, 150, 0, 0) 100%);
+}
+/* About a 10.5 delta-E = +18 green for yellow */
+.shape-bars .bar:nth-child(3) .shape {
+    background: #b81503;
+    box-shadow: var(--barBoxShadowRed);
+}
+
+.yellow .shape-bars .bar:nth-child(3) .shape {
+    background: #FFE703;
+    box-shadow: var(--barBoxShadowYellow);
+}
+
+/** 4th Bar */
+/* haze */
+.shape-bars .bar:nth-child(4) {
+    background: radial-gradient(closest-side, rgba(159, 2, 0, .3) 30%, rgba(159, 2, 0, 0) 100%);
+}
+
+.yellow .shape-bars .bar:nth-child(4) {
+    background: radial-gradient(closest-side, rgba(159, 150, 0, .3) 30%, rgba(159, 150, 0, 0) 100%);
+}
+/* 4th bar */
+.shape-bars .bar:nth-child(4) .shape {
+    background: #cc1703;
+    box-shadow: var(--barBoxShadowRed);
+}
+
+.yellow .shape-bars .bar:nth-child(4) .shape {
+    background: #FFFF50;
+    box-shadow: var(--barBoxShadowYellow);
+}
+
+/* Inner bar haze */
+.shape-bars .bar:nth-child(5) {
+    background: radial-gradient(closest-side, rgba(159, 2, 0, .35) 0, rgba(159, 2, 0, 0) 100%);
+}
+
+.yellow .shape-bars .bar:nth-child(5) {
+    background: radial-gradient(closest-side, rgba(159, 150, 0, .35) 0, rgba(159, 150, 0, 0) 100%);
+}
+/* Inner bar */
+.shape-bars .bar:nth-child(5) .shape {
+    background: #cd3d07;
+    box-shadow: var(--barBoxShadowRed);
+}
+
+.yellow .shape-bars .bar:nth-child(5) .shape {
+    background: #FFFF80;
+    box-shadow: var(--barBoxShadowYellow);
+}
+
+/* Big shaped around the outside */
+.shape-bars-cover {
+    background: var(--alertRed);
+}
+.yellow .shape-bars-cover {
+    background: var(--alertYellow);
+}
+
+.shape-bars-cover:before {
+    background: var(--alertRed);
+}
+.yellow .shape-bars-cover:before {
+    background: var(--alertYellow);
+}
+
+.shape-bars-cover:after {
+    background: var(--alertRed);
+}
+
+.yellow .shape-bars-cover:after {
+    background: var(--alertYellow);
+}
