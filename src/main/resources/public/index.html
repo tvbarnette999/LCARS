@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/persistentwebsocket.min.js"></script>
     <script src="alert.js"></script>
     <link rel=stylesheet href=alert.css>
     <link rel=stylesheet href=colors.css>
     <link rel=stylesheet href=animations.css>
 </head>
 <body>
+<audio id="yellowKlaxon">
+    <source src="yellowAlert.wav" type="audio/wav">
+</audio>
+<audio id="redKlaxon">
+    <source src="redAlert.wav" type="audio/wav">
+</audio>
 <div id="alert" class="red-alert">
     <div class="shape-wide-contain normal">
         <div class=shape-wide>
