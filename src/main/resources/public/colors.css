@@ -4,11 +4,12 @@
     --alertRed: #9f0200;
     --alertYellow: #FFC300;
     --alertGreen: #009F00;
+    --alertGrey: #888888;
     --barBoxShadowYellow: 0 0 .5em .3em rgba(177, 150, 0, .7);
     --barBoxShadowRed: 0 0 .5em .3em rgba(177, 2, 0, .7);
 }
 
-.text {
+.red .text {
     color: var(--alertRed);
 }
 .yellow .text {
@@ -17,6 +18,10 @@
 .green .text {
     color: var(--alertGreen);
 }
+.grey .text {
+    color: var(--alertGrey);
+}
+
 
 .shape-side:before {
     background: var(--alertRed);
@@ -26,6 +31,9 @@
 }
 .green .shape-side:before {
     background: var(--alertGreen);
+}
+.grey .shape-side:before {
+    background: var(--alertGrey);
 }
 
 .shape-wide:before {
@@ -37,10 +45,14 @@
 .green .shape-wide:before {
     background: var(--alertGreen);
 }
+.grey .shape-wide:before {
+    background: var(--alertGrey);
+}
 
-.green .shape-bars {
+.green .shape-bars, .grey .shape-bars {
     display: none;
 }
+
 
 .shape-bars .bar:nth-child(1) .shape {
     background: #970200;
@@ -120,33 +132,17 @@
     box-shadow: var(--barBoxShadowYellow);
 }
 
-/* Big shaped around the outside */
-.shape-bars-cover {
-    background: var(--alertRed);
-}
-.yellow .shape-bars-cover {
-    background: var(--alertYellow);
-}
-.green .shape-bars-cover {
-    background: var(--alertGreen);
-}
+/* Big shape around the outside */
 
-.shape-bars-cover:before {
+.red .shape-bars-cover{
     background: var(--alertRed);
 }
-.yellow .shape-bars-cover:before {
+.yellow .shape-bars-cover{
     background: var(--alertYellow);
 }
-.green .shape-bars-cover:before {
+.green .shape-bars-cover{
     background: var(--alertGreen);
 }
-
-.shape-bars-cover:after {
-    background: var(--alertRed);
-}
-.yellow .shape-bars-cover:after {
-    background: var(--alertYellow);
-}
-.green .shape-bars-cover:after {
-    background: var(--alertGreen);
+.grey .shape-bars-cover{
+    background: var(--alertGrey);
 }

@@ -161,13 +161,15 @@ body {
 }
 
 .text .large {
-    animation: text_large 2s steps(60) infinite;
     letter-spacing: 2px;
+}
+
+.red .text .large {
+    animation: text_large 2s steps(60) infinite;
 }
 
 .yellow .text .large {
     animation: yello_text_large 4s steps(120) infinite;
-    letter-spacing: 2px;
 }
 
 .text .small {
@@ -183,12 +185,19 @@ body {
 #conditionGreen {
     display: none;
 }
-.yellow #conditionRed, .green #conditionRed {
+#conditionGrey {
+    display: none;
+}
+.yellow #conditionRed, .green #conditionRed, .grey #conditionRed {
     display: none;
 }
 .yellow #conditionYellow {
     display: block;
     font-size: .3em;
+}
+.grey #conditionGrey {
+    display: block;
+    font-size: .36em;
 }
 .green #conditionGreen {
     display: block;
