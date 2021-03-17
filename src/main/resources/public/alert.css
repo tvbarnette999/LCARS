@@ -5,6 +5,12 @@
     font-weight: 400
 }
 
+@font-face {
+    font-family: okuda;
+    src: url(Okuda.otf) format("opentype");
+    font-style: normal;
+}
+
 html {
     margin: 0;
     padding: 0
@@ -392,5 +398,87 @@ body {
 .shape-bars-cover.opposite {
     bottom: 15.8125em;
     height: 1.65em
+}
+
+#lcars {
+    font-family: okuda, sans-serif;
+    color: #f6e5ad;
+    font-size: 30px;
+}
+
+#toptext {
+    float: right;
+    position: absolute;
+    right: 2.1em;
+    top: 20px;
+}
+#top_right {
+    width: 30px;
+    height: 20px;
+    background: #7fc6ee;
+    border-radius: 0 10px 10px 0;
+    float: right;
+    position: absolute;
+    right: 1em;
+    top: 10px;
+}
+#top_mid {
+    width: calc(100% - 1em - 5em);
+    height: 20px;
+    background: #ffc7f7;
+    border-radius: 10px 0 0 10px;
+    float: right;
+    position: absolute;
+    right: 5em;
+    top: 10px;
+}
+.silent #top_mid {
+    background-color: #9f0200;
+    cursor: pointer;
+    color: white;
+    font-family: okuda, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+#top_mid span {
+    display: none;
+}
+.silent #top_mid span {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    top: 10px;
+}
+.silent #top_mid:hover {
+    background-color: #600302;
+}
+
+#bottomtext {
+    float: left;
+    position: absolute;
+    left: 2.1em;
+    bottom: 20px;
+    color: #ba872b;
+}
+#bottom_left {
+    width: 30px;
+    height: 20px;
+    background: #7fc6ee;
+    border-radius: 10px 0 0 10px;
+    float: left;
+    position: absolute;
+    left: 1em;
+    bottom: 10px;
+}
+#bottom_mid {
+    width: calc(100% - 1em - 6.8em);
+    height: 20px;
+    background: #d28468;
+    border-radius: 0 10px 10px 0;
+    float: left;
+    position: absolute;
+    left: 6.8em;
+    bottom: 10px;
 }
 

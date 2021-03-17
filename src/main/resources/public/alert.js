@@ -35,9 +35,10 @@ function connectSocket() {
         let data = e.data; //JSON.parse(e.data);
         let mem = parseFloat(data)
         let newStatus = GREEN;
-        if (mem > .9) {
+        // hysteresis - must drop to 85% after triggering
+        if ((status === RED && mem > .85) || mem > .9) {
             newStatus = RED
-        } else if (mem > .75) {
+        } else if ((status === YELLOW && mem > .7) || mem > .75) { // must drop to 70 after triggering
             newStatus = YELLOW;
         }
         setStatus(newStatus);
@@ -49,5 +50,18 @@ function connectSocket() {
     socket.open();
 }
 $(document).ready(() => {
+    let prom = $("#loadTone")[0].play();
+    if (prom) {
+        prom.then(() => {
+            $("#lcars").removeClass("silent");
+            $("#readyMessage")[0].play();
+        }).catch(err => {
+            console.log("NOPE!");
+            $("#top_mid").click(() => {
+                $("#readyMessage")[0].play();
+                $("#lcars").removeClass("silent");
+            });
+        });
+    }
     connectSocket();
 });
