@@ -35,8 +35,8 @@ function connectSocket() {
         let data = e.data; //JSON.parse(e.data);
         let mem = parseFloat(data)
         let newStatus = GREEN;
-        // hysteresis - must drop to 85% after triggering
-        if ((status === RED && mem > .85) || mem > .9) {
+        // hysteresis - must drop to 80% after triggering
+        if ((status === RED && mem > .8) || mem > .85) {
             newStatus = RED
         } else if ((status === YELLOW && mem > .7) || mem > .75) { // must drop to 70 after triggering
             newStatus = YELLOW;
